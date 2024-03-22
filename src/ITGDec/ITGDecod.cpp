@@ -789,7 +789,7 @@ int main(int argc, char *argv[])
 			printf("Delay standard deviation = %13.6lf s\n", flowinfo[z].delvariation);
 			printf("Bytes received           = %13.0lf\n", flowinfo[z].byterecv);
 			if (totaltime > 0) {
-				printf("Average bitrate          = %13.6lf Kbit/s\n", flowinfo[z].byterecv * 8 / 1000 / totaltime);
+				printf("Average bitrate          = %13.6lf Mbit/s\n", flowinfo[z].byterecv * 8 / 1000000 / totaltime);
 				printf("Average packet rate      = %13.6lf pkt/s\n", (double) flowinfo[z].pktrecv / totaltime);
 			} else {
 				printf("Average bitrate          = %13.6lf Kbit/s\n", (double) 0);
@@ -834,10 +834,10 @@ int main(int argc, char *argv[])
 		printf("Delay standard deviation = %13.6lf s\n", delvariation);
 		printf("Bytes received           = %13.0lf\n", byterecv);
 		if (totaltime > 0) {
-			printf("Average bitrate          = %13.6lf Kbit/s\n", byterecv * 8 / 1000 / totaltime);
+			printf("Average bitrate          = %13.6lf Mbit/s\n", byterecv * 8 / 1000000 / totaltime);
 			printf("Average packet rate      = %13.6lf pkt/s\n", pktrecv / totaltime);
 		} else {
-			printf("Average bitrate          = %13.6lf Kbit/s\n", (double) 0);
+			printf("Average bitrate          = %13.6lf Mbit/s\n", (double) 0);
 			printf("Average packet rate      = %13.6lf pkt/s\n", (double) 0);
 		}
 		if (pktrecv > 0 && pktloss > 0) {
